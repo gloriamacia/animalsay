@@ -1,25 +1,18 @@
-import sys
-
-from farm.animals import _cow 
-# why does from farm.animals import * not work,
-# like it seems to need a function, not a variable
-from home.animals import _bunny, _cat
-
+from .farm.animals import *
+from animalsay.home.animals import * # both lines above work
 
 flg = []
+animals = {'cow':cow, 'bunny':bunny, 'cat':cat}
 
-animals = {'cow':_cow, 'bunny':_bunny, 'cat':_cat}
 
-def string_processing(args):
-
-    args = str(args)
+def string_processing(text):
+    args = str(text)
     lines = args.split("\n")
     lines = [i.strip() for i in lines]
     lines = [i for i in lines if len(i) != 0]
     length = len(lines)
     
     if length == 1:
-
         flag = len(lines[0])
         if flag < 50:
             print("  " + "_" * flag)
@@ -31,8 +24,7 @@ def string_processing(args):
             for j, i in enumerate(args):
                 if j % 50 == 0:
                     args.insert(j, "\n")
-            string_processing("".join(args))
-               
+            string_processing("".join(args)) 
     else:
         flag = len(max(lines, key=len))
         if all(len(i) < 50 for i in lines):
@@ -55,11 +47,9 @@ def string_processing(args):
                 else:
                     new_lines.append(i + "\n")
             string_processing("".join(new_lines))
-                    
-def talk(animal, text):
 
+def say(animal, text):
     try:
-
         string_processing(text)
         flag = flg[-1]
 
@@ -72,8 +62,5 @@ def talk(animal, text):
 
         for i in char_lines:
             print(' ' * (flag + 5) + i)
-
     except:
         print("I cannot say this! Give me something easier")
-
-
