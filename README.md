@@ -1,6 +1,6 @@
 # Animalsay
 
-A Python version of the famous [cowsay](https://en.wikipedia.org/wiki/Cowsay) program by Tony Monroe 
+A Python version of the famous [cowsay](https://en.wikipedia.org/wiki/Cowsay) program by Tony Monroe. It is based in this other [Python package](https://github.com/VaasuDevanS/cowsay-python) but with cuter animals. If you like it, feel free to contribute and add your own animals. 
 
 # Install
 
@@ -16,9 +16,9 @@ $ pip install animalsay
 $ from animalsay.utils import say
 $ say("cow", "hello world!")
 
-  __
-< hi >
-  ==
+  ____________
+< hello world! >
+  ============
        \
         \
           ^__^
@@ -29,8 +29,16 @@ $ say("cow", "hello world!")
 
 ```
 
+It accepts both a short sentence and a [long text](https://www.lipsum.com/). 
 
+# More Animals
 
+To see the the list of available animals.
 
+```sh
+$ import animalsay
+$ animalsay.utils.animals.keys()
 
+dict_keys(['cow', 'bunny', 'cat'])
 
+```

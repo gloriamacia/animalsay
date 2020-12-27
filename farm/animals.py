@@ -7,5 +7,3 @@ cow = r'''
        ||     ||  
        
     '''
-def foo():
-    return r'asdfasdf'
