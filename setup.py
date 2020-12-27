@@ -19,6 +19,7 @@ setup(
     long_description_content_type="text/markdown",
     author="Gloria Macia",
     author_email="gloria.macia@roche.com",
+    url="https://github.com/gloriamacia/animalsay",
     license="MIT",
     classifiers=[
         "License :: OSI Approved :: MIT License",
