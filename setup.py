@@ -13,7 +13,7 @@ with open(os.path.join(HERE, "README.md")) as fh:
 # This call to setup() does all the work
 setup(
     name="animalsay", # what you pip install not necesarily what you import
-    version="1.0.3",
+    version="1.0.4",
     description="A Python version of the famous cowsay program by Tony Monroe.",
     long_description=long_description,
     long_description_content_type="text/markdown",
